@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/mainLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/blueTeamName"
+                        android:textSize="@dimen/teamNameFontSize" />
+
+                    <TextView
+                        android:id="@+id/chelsea_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/result"
+                        android:textSize="@dimen/scoreResultFontSize" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/buttonGoalsMarginBottom"
+                        android:layout_marginLeft="@dimen/buttonGoalsMarginLeft"
+                        android:layout_marginRight="@dimen/buttonGoalsMarginRight"
+                        android:layout_marginTop="@dimen/buttonGoalsMarginTop"
+                        android:background="@color/colorBlueButton"
+                        android:onClick="addGoalChelsea"
+                        android:text="@string/goals" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/foulBlueButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/buttonMarginBottom"
+                        android:layout_marginLeft="@dimen/blueMarginLeft"
+                        android:layout_marginRight="@dimen/blueMarginRight"
+                        android:layout_marginTop="@dimen/buttonTopMarginFouls"
+                        android:background="@color/colorBlueButton"
+                        android:onClick="addFoulChelsea"
+                        android:text="@string/fouls" />
+
+                    <TextView
+                        android:id="@+id/chelsea_fouls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/blueMarginLeft"
+                        android:layout_marginRight="@dimen/redMarginRight"
+                        android:layout_marginTop="@dimen/TopMarginFoulsText"
+                        android:text="@string/result"
+                        android:textSize="@dimen/gameStatsFontSize" />
+
+                    <Button
+                        android:id="@+id/yellowCardBlueButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/foulBlueButton"
+                        android:layout_marginBottom="@dimen/buttonMarginBottom"
+                        android:layout_marginLeft="@dimen/blueMarginLeft"
+                        android:layout_marginRight="@dimen/blueMarginRight"
+                        android:background="@color/colorBlueButton"
+                        android:onClick="addYellowCardChelsea"
+                        android:text="@string/yellowCards" />
+
+                    <TextView
+                        android:id="@+id/chelsea_yellow_cards"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignRight="@id/yellowCardBlueButton"
+                        android:layout_below="@id/chelsea_fouls"
+                        android:layout_marginLeft="@dimen/blueMarginLeft"
+                        android:layout_marginRight="@dimen/redMarginRight"
+                        android:layout_marginTop="@dimen/buttonsMarginStatsTop"
+                        android:text="@string/result"
+                        android:textSize="@dimen/gameStatsFontSize" />
+
+                    <Button
+                        android:id="@+id/redCardBlueButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/yellowCardBlueButton"
+                        android:layout_marginLeft="@dimen/blueMarginLeft"
+                        android:layout_marginRight="@dimen/blueMarginRight"
+                        android:background="@color/colorBlueButton"
+                        android:onClick="addRedCardChelsea"
+                        android:text="@string/redCards" />
+
+                    <TextView
+                        android:id="@+id/chelsea_red_cards"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignRight="@id/redCardBlueButton"
+                        android:layout_below="@id/chelsea_yellow_cards"
+                        android:layout_marginLeft="@dimen/blueMarginLeft"
+                        android:layout_marginRight="@dimen/redMarginRight"
+                        android:layout_marginTop="@dimen/buttonsMarginStatsTop"
+                        android:text="@string/result"
+                        android:textSize="@dimen/gameStatsFontSize" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="400dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/redTeamName"
+                    android:textSize="@dimen/teamNameFontSize" />
+
+                <TextView
+                    android:id="@+id/arsenal_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/result"
+                    android:textSize="@dimen/scoreResultFontSize" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/buttonGoalsMarginBottom"
+                    android:layout_marginLeft="@dimen/buttonGoalsMarginLeft"
+                    android:layout_marginRight="@dimen/buttonGoalsMarginRight"
+                    android:layout_marginTop="@dimen/buttonGoalsMarginTop"
+                    android:background="@color/colorRedButton"
+                    android:onClick="addGoalArsenal"
+                    android:text="@string/goals" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/arsenal_fouls"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/blueMarginLeft"
+                        android:layout_marginRight="@dimen/redMarginRight"
+                        android:layout_marginTop="@dimen/TopMarginFoulsText"
+                        android:text="@string/result"
+                        android:textSize="@dimen/gameStatsFontSize" />
+
+                    <Button
+                        android:id="@+id/foulRedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/buttonMarginBottom"
+                        android:layout_marginLeft="@dimen/redMarginLeft"
+                        android:layout_marginRight="@dimen/redMarginRight"
+                        android:layout_marginTop="@dimen/buttonTopMarginFouls"
+                        android:background="@color/colorRedButton"
+                        android:onClick="addFoulArsenal"
+                        android:text="@string/fouls" />
+
+                    <TextView
+                        android:id="@+id/arsenal_yellow_cards"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/yellowCardRedButton"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/arsenal_fouls"
+                        android:layout_marginLeft="@dimen/blueMarginLeft"
+                        android:layout_marginRight="@dimen/redMarginRight"
+                        android:layout_marginTop="@dimen/buttonsMarginStatsTop"
+                        android:text="@string/result"
+                        android:textSize="@dimen/gameStatsFontSize" />
+
+                    <Button
+                        android:id="@+id/yellowCardRedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/foulRedButton"
+                        android:layout_marginBottom="@dimen/buttonMarginBottom"
+                        android:layout_marginLeft="@dimen/redMarginLeft"
+                        android:layout_marginRight="@dimen/redMarginRight"
+                        android:background="@color/colorRedButton"
+                        android:onClick="addYellowCardArsenal"
+                        android:text="@string/yellowCards" />
+
+                    <TextView
+                        android:id="@+id/arsenal_red_cards"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/arsenal_red_cards"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/arsenal_yellow_cards"
+                        android:layout_marginLeft="@dimen/blueMarginLeft"
+                        android:layout_marginRight="@dimen/redMarginRight"
+                        android:layout_marginTop="@dimen/buttonsMarginStatsTop"
+                        android:text="@string/result"
+                        android:textSize="@dimen/gameStatsFontSize" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/yellowCardRedButton"
+                        android:layout_marginLeft="@dimen/redMarginLeft"
+                        android:layout_marginRight="@dimen/redMarginRight"
+                        android:background="@color/colorRedButton"
+                        android:onClick="addRedCardArsenal"
+                        android:text="@string/redCards" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mainLinearLayout"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/buttonGoalsMarginBottom"
+                android:layout_marginLeft="@dimen/buttonGoalsMarginLeft"
+                android:layout_marginRight="@dimen/buttonGoalsMarginRight"
+                android:layout_marginTop="@dimen/buttonGoalsMarginTop"
+                android:background="@color/colorResetButton"
+                android:onClick="resetScore"
+                android:text="@string/reset" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

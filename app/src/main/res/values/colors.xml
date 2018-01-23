@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!-- Colour of the B Team button/Arsenal -->
+    <color name="colorBlueButton">#5954e9</color>
+    <!-- Colour of the Red Team button/Arsenal -->
+    <color name="colorRedButton">#da1529</color>
+    <!-- Colour of the reset button -->
+    <color name="colorResetButton">#a6bc28</color>
+</resources>

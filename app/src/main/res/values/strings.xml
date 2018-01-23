@@ -1,0 +1,12 @@
+<resources>
+    <!-- Define App name-->
+    <string name="app_name">Score Keeper</string>
+    <string name="goals">Goals</string>
+    <string name="result">0</string>
+    <string name="fouls">Fouls</string>
+    <string name="yellowCards">Yellow Cards</string>
+    <string name="redCards">Red Cards</string>
+    <string name="blueTeamName">Chelsea</string>
+    <string name="redTeamName">Arsenal</string>
+    <string name="reset">reset</string>
+</resources>
